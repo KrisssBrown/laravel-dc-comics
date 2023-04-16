@@ -13,6 +13,12 @@
     <!-- Styles -->
     @vite('resources/js/app.js')
 
+    <style>
+        img{
+            height: 150px
+        }
+    </style>
+
 </head>
 
 <body>
@@ -35,6 +41,7 @@
                     <tr>
                         <th scope="row">{{ $comic->id }}</th>
                         <td>{{ $comic->title }}</td>
+                        <td><img src="{{ $comic->thumb }}"></td>
                         <td>{{ $comic->description }}</td>
                         <td>{{ $comic->price }}</td>
                         <td>{{ $comic->series }}</td>
