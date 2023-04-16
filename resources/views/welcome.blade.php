@@ -24,7 +24,7 @@
 <body>
 
     <main class="container py-5">
-        <table class="table tabel-stripes">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">#</th>
