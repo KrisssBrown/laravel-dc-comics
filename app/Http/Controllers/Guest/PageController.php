@@ -15,6 +15,17 @@ class PageController extends Controller
             'comic' => $comics
         ];
 
-        return view('comics.index', $data);
+        return view('comicsCrud.index', $data);
+    }
+
+
+    public function show(Comic $comics){
+        $comics = Comic::all();
+
+        $data = [
+            'comic' => $comics
+        ];
+
+        return view('comicsCrud.show', $data);
     }
 }
