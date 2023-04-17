@@ -1,30 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-    <style>
-        img{
-            height: 150px
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <main class="container py-5">
-        <table class="table table-striped">
+@section('content')
+    <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -45,7 +22,7 @@
                         <td>{{ $comic->description }}</td>
                         <td>{{ $comic->price }}</td>
                         <td>{{ $comic->series }}</td>
-                        <td>{{ $comic->sales_date }}</td>
+                        <td>{{ $comic->sale_date }}</td>
                         <td>{{ $comic->type }}</td>
 
                     </tr>
@@ -53,8 +30,4 @@
 
             </tbody>
         </table>
-    </main>
-
-</body>
-
-</html>
+@endsection

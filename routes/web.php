@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'list']);
+Route::get('/', [PageController::class, 'index']);

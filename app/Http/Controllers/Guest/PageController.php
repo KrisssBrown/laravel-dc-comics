@@ -8,13 +8,13 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function list(){
+    public function index(){
         $comics = Comic::all();
 
         $data = [
             'comic' => $comics
         ];
 
-        return view('welcome', $data);
+        return view('comics.index', $data);
     }
 }
