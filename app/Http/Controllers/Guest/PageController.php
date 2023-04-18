@@ -19,13 +19,20 @@ class PageController extends Controller
     }
 
 
-    public function show(Comic $comics){
-        $comics = Comic::all();
-
+    public function show(Comic $comic){
         $data = [
-            'comic' => $comics
+            'comic' => $comic
         ];
 
         return view('comicsCrud.show', $data);
+    }
+
+
+    public function create(){
+        return view('comicsCrud.create');
+    }
+
+    public function store(){
+
     }
 }

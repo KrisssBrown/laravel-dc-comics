@@ -15,7 +15,7 @@
 
     <style>
         img {
-            height: 150px
+            width: 150px
         }
     </style>
 
@@ -25,7 +25,7 @@
 
     @include('partials.header')
 
-    <main class="container py-5">
+    <main class="my-container py-5">
         @yield('content')
     </main>
 
