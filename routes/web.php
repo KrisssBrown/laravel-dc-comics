@@ -20,4 +20,6 @@ Route::get('/comics/create', [PageController::class, 'create'])->name('comics.cr
 
 Route::get('/comics/{comic}', [PageController::class, 'show'])->name('comics.show');
 
-Route::post('comcis', [PageController::class, 'store'])->name('comics.store');
+Route::post('comics', [PageController::class, 'store'])->name('comics.store');
+
+Route::get('/comics/{comic}/edit', [PageController::class, 'edit'])->name('comics.edit');
