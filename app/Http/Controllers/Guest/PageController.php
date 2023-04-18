@@ -73,11 +73,11 @@ class PageController extends Controller
         return to_route('comics.show', $comic);
     }
 
-    
+
     public function destroy(Comic $comic)
     {
 
-        // dd($pasta);
+        
         $comic->delete();
 
         return to_route('comics.index');
