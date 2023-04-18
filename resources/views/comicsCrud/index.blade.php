@@ -28,8 +28,15 @@
                     <td>{{ $comic->sale_date }}</td>
                     <td>{{ $comic->type }}</td>
                     <td>
-                        <button type="submit" class="btn btn-warning">Modifica</button>
+                        <a href="{{ route('comics.edit', $comic) }}">
+                            <button class="btn btn-warning">Modifica</button>
+                        </a>
                     </td>
+                    {{-- <td>
+                        <a href="{{ route('comics.destroy', $comic) }}">
+                            <button class="btn btn-danger">Elimina</button>
+                        </a>
+                    </td> --}}
                 </tr>
             @endforeach
 

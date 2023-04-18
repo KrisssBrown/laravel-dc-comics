@@ -16,7 +16,7 @@
                 <textarea class="form-control" id="description" rows="5" name="description"></textarea>
             </div>
             <div class="mb-3">
-                <label for="thumb" class="form-label">Inserisci link thumbnail</label>
+                <label for="thumb" class="form-label">Immagine (url)</label>
                 <input type="text" class="form-control" id="thumb" name="thumb">
             </div>
             <div class="mb-3">

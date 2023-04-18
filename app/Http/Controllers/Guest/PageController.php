@@ -47,11 +47,39 @@ class PageController extends Controller
         
         $newComic->save();
         
-        return to_route('comics.show', $newComic -> id);
+        return to_route('comics.show', $newComic);
     }
 
 
-    public function edit($comic){
+    public function edit(Comic $comic){
+        return view('comicsCrud.edit', compact('comic'));
+    }
+
+    public function update(Request $request, Comic $comic){
+        $data = $request->all();
+
         
+
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->thumb = $data['thumb'];
+        $comic->price = $data['price'];
+        $comic->series = $data['series'];
+        $comic->sale_date = $data['sale_date'];
+        $comic->type = $data['type'];
+
+        $comic->save();
+
+        return to_route('comics.show', $comic);
+    }
+
+    
+    public function destroy(Comic $comic)
+    {
+
+        // dd($pasta);
+        $comic->delete();
+
+        return to_route('comics.index');
     }
 }
