@@ -8,6 +8,27 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    public function validation(Request $request)
+    {
+        return $request->validate([
+            'title' => 'required|max:150|min:3',
+            'description' =>'nullable|max:2000|string',
+            'thumb'=>'required|url|max:500',
+            'price'=>'required|numeric|max:5',
+            'series'=>'required|string|max:30',
+            'sale_date'=>'required|string|max:20',
+            'type'=>'required|string|max:25'
+        ]);
+    }
+
+
+
+
+
+
+
+
+
     public function index(){
         $comics = Comic::all();
 
